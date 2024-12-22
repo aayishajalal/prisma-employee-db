@@ -1,21 +1,21 @@
 // src/apiService.js
-import axios from 'axios';
+import axios from "axios";
 
 // Base URL for the API, update it with your server's URL
-const BASE_URL = 'http://localhost:5000/api/employee'; // Updated with /employee
+const BASE_URL = "http://localhost:5000/api/employee"; // Updated with /employee
 
 // Axios instance for configuring defaults (optional)
 const api = axios.create({
   baseURL: BASE_URL,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
 // Create a new employee
 export const createEmployee = async (employeeData) => {
   try {
-    const response = await api.post('/create-employee', employeeData); // Updated path
+    const response = await api.post("/create-employee", employeeData); // Updated path
     return response.data;
   } catch (error) {
     throw error.response ? error.response.data : error.message;
@@ -25,7 +25,7 @@ export const createEmployee = async (employeeData) => {
 // Get all employees
 export const getAllEmployees = async () => {
   try {
-    const response = await api.get('/get-employees'); // Updated path
+    const response = await api.get("/get-employees"); // Updated path
     return response.data;
   } catch (error) {
     throw error.response ? error.response.data : error.message;

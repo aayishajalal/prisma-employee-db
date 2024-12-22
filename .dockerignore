@@ -1,0 +1,60 @@
+# Ignore node_modules (to be installed inside the container)
+node_modules/
+
+# Ignore build output (frontend/build or dist) - rebuild during Docker image creation
+frontend/build/
+backend/build/
+dist/
+
+# Ignore any logs
+*.log
+*.sql
+*.sqlite
+
+# Ignore MySQL data (or other database data) - do not include it in the image
+mysql_data/
+
+# Ignore temporary files
+.DS_Store
+Thumbs.db
+
+# IDE and editor settings (Visual Studio Code, JetBrains, Sublime Text, etc.)
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+
+
+# Ignore system files
+*.swp
+*.swo
+*.bak
+
+
+# Ignore the whole source code folder (if you don't want to include all files in the context)
+src/
+
+# Ignore test data or test results
+test/
+tests/
+*.test.js
+*.test.ts
+
+# Ignore coverage reports
+coverage/
+*.lcov
+
+# Ignore dependency directories like bower_components, etc.
+bower_components/
+
+# Ignore personal files or configuration files
+*.tgz
+*.zip
+*.tar.gz
+
+# Ignore NPM or Yarn lock files if not required for the build
+package-lock.json
+yarn.lock
+
+# Ignore any directory that's not related to the image build context
